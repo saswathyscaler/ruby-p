@@ -33,45 +33,40 @@
 #   p1.intro
                 
 # puts p1.evolve
-
-
- class Box
-   def initialize(h,w)
-    @height =h
-    @width =h
-   end
-   def getHeight
-    return  @height =h
-    
-   end
-   
-   def getWidth
-    return   @width =w
+class Box
+    def initialize(h, w)
+      @height = h
+      @width = w
+    end
   
-   end
-   def setHeight(h)
-    @height =h
-
-   end
-
-   def setWidth(w)
-    @width =w
-
-   end
-   def getArea
-    return  @height*@width
-     
-   end
-   private :getHeight,:getWidth,:setHeight,:setWidth
-public :getArea
- end
- 
-
- b1 = Box.new(0,0)
- 
- b1.setHeight(20)
- b1.setWidth(20)
-
- puts b1.getHeight
- puts b1.getWidth
- puts b1.getArea
+    def getHeight
+      return @height
+    end
+  
+    def getWidth
+      return @width
+    end
+  
+    def setHeight(h)
+      @height = h
+    end
+  
+    def setWidth(w)
+      @width = w
+    end
+  
+    def getArea
+      return @height * @width
+    end
+  
+    public :getArea
+  end
+  
+  b1 = Box.new(0, 0)
+  b1.setHeight(20)
+  b1.setWidth(20)
+  
+  puts b1.getHeight
+  puts b1.getWidth
+  puts b1.getArea
+  
