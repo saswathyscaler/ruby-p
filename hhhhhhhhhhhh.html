@@ -1,0 +1,59 @@
+<div id="t">
+    <div id="121">
+        <h2>hello</h2>
+        <a href="xxxxxx">
+
+            <img src="hello.jpg" alt="">
+
+        </a>
+    </div>
+
+    <div id="123">
+        <h2>hello</h2>
+        <a href="xxxxxx">
+
+            <img src="hello.jpg" alt="">
+
+        </a>
+    </div>
+
+    <div id="125">
+        <h2>hello</h2>
+        <a href="xxxxxx">
+
+            <img src="hello.jpg" alt="">
+
+        </a>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    const main_div = document.getElementById("themes");
+    const sub_div = mainDiv.querySelectorAll("div");
+
+    const data = [];
+    for (let i = 0; i < subDiv.length; i++) {
+        const div = subDiv[i];
+        const template_id = div.getAttribute("id");
+        const template_title = div.querySelector("h2").textContent;
+        const template_preview_url = div.querySelector("a").getAttribute("href");
+        const template_image_url = div.querySelector("img").getAttribute("src");
+
+        const item = {
+            id: template_id,
+            title: template_title,
+            link: template_preview_url,
+            image: template_image_url,
+        };
+
+        data.push(item);
+    }
+
+    console.log(JSON.stringify(data, null, " "));
+
+
+</script>
